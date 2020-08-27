@@ -30,7 +30,10 @@ function create(req, res) {
 }
 
 function deleteOne(req, res) {
-
+  Pokemon.findByIdAndRemove(req.params.id)
+    .then((pokemon) => {
+      res.status(200).json(pokemon)
+    })
 }
 
 function update(req, res) {
