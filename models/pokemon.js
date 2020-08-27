@@ -2,9 +2,12 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const pokemonSchema = new Schema({
-  name: {
+  pokemon: {
     type: String,
     required: true
+  },
+  nickname: {
+    type: String
   },
   type: {
     type: String,

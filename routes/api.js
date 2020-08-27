@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const pokemonCtrl = require('../controllers/api/pokemons');
 
-router.get('/pokemon', pokemonCtrl.index)
-router.get('/pokemon/:id', pokemonCtrl.show)
-router.post('/pokemon', pokemonCtrl.create)
-router.put('/pokemon/:id', pokemonCtrl.update)
-router.delete('/pokemon/:id', pokemonCtrl.delete)
+router.get('/pokemons', pokemonCtrl.index)
+router.get('/pokemons/:id', pokemonCtrl.show)
+router.post('/pokemons', pokemonCtrl.create)
+router.put('/pokemons/:id', pokemonCtrl.update)
+router.delete('/pokemons/:id', pokemonCtrl.delete)
 
 module.exports = router;
