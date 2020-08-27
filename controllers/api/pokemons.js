@@ -16,7 +16,10 @@ function index(req, res) {
 }
 
 function show(req, res) {
-
+  Pokemon.findById(req.params.id)
+    .then((pokemon) => {
+      res.status(200).json(pokemon)
+    })
 }
 
 function create(req, res) {
@@ -31,5 +34,10 @@ function deleteOne(req, res) {
 }
 
 function update(req, res) {
-
+  Pokemon.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    .then((pokemon) => {
+      res.status(200).json(pokemon)
+    })
 }
